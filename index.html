@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="https://media.istockphoto.com/id/1431988128/es/vector/icono-3d-del-planeta-esfera-tierra-vida-de-las-personas-elemento-del-sistema-solar-globo.jpg?s=612x612&w=0&k=20&c=dIPImI4MeT8FS8NUhSMj0ytT2PtfZmNQCzaV7uHXyWw=">
   <title>Bomba Game</title>
 </head>
 <body>
   <h1>Bomba Game</h1>
   <p>Introduce un número del 1 al 3 y pulsa enter o clicka fuera del cuadrado:</p>
-  <input type="number" placeholder="0" id="userInput" min="1" max="3">
-  <div id="countdown"></div>
-  <div id="result"></div>
-  <button id="restart">Reiniciar Juego</button>
+  <div id="contenedorSelector">
+    <input type="number" placeholder="0" id="userInput" min="1" max="3">
+  </div>
+  <div id="contenedorResulados">
+    <div id="countdown"></div>
+    <div id="result"></div>
+  </div>
+  <div id="contenedorReiniciar"> 
+    <button id="restart">Reiniciar Juego</button>
+  </div>
+  </div>
+  
+  
 
 <script src="./js/script.js"></script>
 

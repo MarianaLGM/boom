@@ -1,17 +1,71 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  background-image: url(https://img.freepik.com/fotos-premium/planeta-tierra-estrellas-fondo-espacio-oscuro_488220-60343.jpg?w=1060);
+  background-size: 100%;
 }
 
 h1 {
-  color: #333;
+  color: #f2ecec;
+  font-size: 55px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
 }
+
+/*frase*/
+p {
+  color: #f2ecec;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+}
+
 #result .green {
   color: #2ecc71;
 }
 
 #result .red {
   color: #e74c3c;
+}
+
+/*boton reset*/
+#restart{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  background-color: #2ecc71;
+}
+
+#restart:hover{
+  transform:scale(1.3);
+}
+
+/*selector opciones*/
+#userInput{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px; 
+
+}
+
+/*contenedores*/
+#contenedorSelector{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedorResulados{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedorReiniciar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
