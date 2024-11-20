@@ -71,8 +71,3 @@ function cuentaAtras() {
      eleccionUsuario===0   
 })
 
-  function restart(){
-    document.getElementById("restart").value.reset();
-
-  }
-
