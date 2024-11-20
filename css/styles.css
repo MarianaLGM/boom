@@ -69,3 +69,11 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+#result{
+  color: #f2ecec;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+}
