@@ -5,9 +5,9 @@ let result= document.getElementById("result"); //"¡Has salvado el mundo!" ó "L
 let resultados=document.getElementById("contenedorResulados");
 let eleccionUsuario=0;
 
-//funcion para comparar seleccion usuario vs ordenador cuando haga click:
+// comparar seleccion usuario vs ordenador cuando haga click:
 
-userInput.addEventListener("change", function() { //el change es para los desplegables cuando cambian de opción y se escoge entre varios.
+userInput.addEventListener("change", function() { //el change es para los desplegables cuando cambian de opción y se escoge entre varios.Aqui podría usar el keydown para que cuando presione enter o una tecla 
     eleccionUsuario = userInput.value
   })
 
@@ -16,29 +16,8 @@ const eleccionOrdenador = Math.floor(Math.random()*3) + 1  //numero aleatorio se
 console.log("la eleccion del ordenador es",eleccionOrdenador) //ok
 console.log("mi eleccion es",eleccionUsuario)//ok
 
-/*1. Función comenzar juego
-     - Con una cuenta atrás (esto será otra función que debes crear y luego la llamas aquí)
-     - promesa para crear el número random del ordenador:
-           - con un setTimeout para que se resuelva en el mismo tiemo que la cuenta atrás.
-     - Debe retornar el eleccionOrdenador.*/
-function inicioJuego(){
-    return new Promise((resolve, reject) => {
-    resolve()
-    if (inicioJuego.length===0) {
-        reject (new error("Inicio del juego is empty"))
-    }
-        setTimeout (() =>{
-        resolve (eleccionOrdenador, cuentaAtras);
-    }, 5000)
-    })
-}
 
-inicioJuego()
-    .then((response) => console.log (response))
-    .catch((err) => console.log(err.mensaje))  
-    
-    
-/*2.Función para comenzar la cuenta atrás- setInterval*/
+/*Función para comenzar la cuenta atrás- setInterval*/
 
 function cuentaAtras() {
     if (eleccionUsuario==0) {
@@ -48,12 +27,73 @@ function cuentaAtras() {
   countdown.addEventListener("click", cuentaAtras)
   }
 } 
+
+
+// Primero obten el selector donde caerá el número
+const cont = document.getElementById('cont');
+
+/*Función comenzar juego
+     - Con una cuenta atrás (esto será otra función que debes crear y luego la llamas aquí)
+     - promesa para crear el número random del ordenador:
+           - con un setTimeout para que se resuelva en el mismo tiemo que la cuenta atrás.
+     - Debe retornar el eleccionOrdenador.*/
+   
+     const promesa1 = new Promise ((resolve) =>{
+       setTimeout(()=>{
+         cuentaAtras= "0"
+         resolve (cuentaAtras)
+        },5000);
+       });
+       console.log (promesa1)
+     const promesa2 = new Promise ((resolve) =>{
+       setTimeout(()=>{
+         resolve (eleccionOrdenador)
+         },5000);
+       });
+       console.log (promesa2) 
+     
+    promesa1
+     .then ((cuentaAtras)=>
+     console.log(cuentaAtras)
+     );
+     promesa2
+     .then ((eleccionOrdenador)=>
+     console.log(eleccionOrdenador)
+     );
+     
+     const sumaPromesas=Promise.all([promesa1, promesa2]).then((values) => {
+       console.log(promesa1,promesa2)
+     })
+     
+     
+     
+
+
+
+
+
+
+     /*
+function inicioJuego(){
+    return new Promise((resolve, reject) => { //resolve=resuelto y reject= rechazado (error)
+    if (eleccionOrdenador.length===0) {
+        reject (new error("Inicio del juego is empty"))
+    }
+        setTimeout (() =>{
+        resolve (eleccionOrdenador, cuentaAtras);
+    }, 5000)
+   
+    .then((response) => console.log (response))
+    .catch((err) => console.log(err.mensaje))  
+    })
+    
+} */
  
 
 /*Ejecutamos la función "Comenzar juego" con una promesa .then
 y una condicional donde le diremos que si el numero seleccionado por el ordenador (random) es igual que el número seleccionado por el usuario ...
 Esto es lo que ya te pone en el enunciado de las frases.*/
-
+/*
 function resultadoJuego(){
     
    document.createElement('p')=result;
