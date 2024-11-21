@@ -37,7 +37,7 @@ const cont = document.getElementById('cont');
      - promesa para crear el número random del ordenador:
            - con un setTimeout para que se resuelva en el mismo tiemo que la cuenta atrás.
      - Debe retornar el eleccionOrdenador.*/
-   
+     function inicioJuego(){   
      const promesa1 = new Promise ((resolve) =>{
        setTimeout(()=>{
          cuentaAtras= "0"
@@ -66,10 +66,7 @@ const cont = document.getElementById('cont');
      })
      
      
-     
-
-
-
+    }
 
 
 
@@ -93,7 +90,7 @@ function inicioJuego(){
 /*Ejecutamos la función "Comenzar juego" con una promesa .then
 y una condicional donde le diremos que si el numero seleccionado por el ordenador (random) es igual que el número seleccionado por el usuario ...
 Esto es lo que ya te pone en el enunciado de las frases.*/
-/*
+
 function resultadoJuego(){
     
    document.createElement('p')=result;
