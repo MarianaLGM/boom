@@ -30,26 +30,28 @@ function inicioJuego() {
 }
 
 
-
-//funcion cuenta atrás
+//funcion cuenta atrás// NO VUELCA EL CONTADOR EN WEB 5,4,3,2,1,0
 function cuentaAtras(tiempo) {
   if (eleccionUsuario==0) {
     tiempo=setInterval(5,4,3,2,1,0);
     setTimeout(() => {
 countdown.addEventListener("click", cuentaAtras)
 
-//mensajeCountdown = `<h3> Cuenta atrás: ${tiempo} segundos</h3>`;
- //countdown.innerHTML=mensajeCountdown;
-
   },6000)
 }
 }
 
 
+
 inicioJuego().then((numOrdenador) => {
-  //aquí el condicional donde se compara la eleccion del usuario y la del ordenador y donde se mostrará el mensaje según resultado)
-  if (eleccionUsuario === numOrdenador) {
-    mensaje = `<h3> ¡Has salvado el mundo!Tu número ${eleccionUsuario} es el mismo que el número ${numOrdenador}</h3>`; //le estoy diciento que en la varialble result me pinte esa frase
+  //condicional que compara la eleccion del usuario y la del ordenador y donde se mostrará el mensaje según resultado)
+  if (eleccionUsuario == 1 & numOrdenador== 1) {
+    mensaje = `<h3>¡Has salvado el mundo!Tu número ${eleccionUsuario} es el mismo que el número ${numOrdenador}</h3>`; //le estoy diciento que en la varialble result me pinte esa frase
+  }else if (eleccionUsuario == 2 & numOrdenador== 2){
+    mensaje = `<h3>¡Has salvado el mundo!Tu número ${eleccionUsuario} es el mismo que el número ${numOrdenador}</h3>`;
+  }else if (eleccionUsuario == 3 & numOrdenador== 3){
+    mensaje = `<h3>¡Has salvado el mundo!Tu número ${eleccionUsuario} es el mismo que el número ${numOrdenador}</h3>`;
+   
   } else {
     mensaje = `<h3>¡La bomba ha estallado! Tu número ${eleccionUsuario} es diferente que el número ${numOrdenador}</h3>`; //le estoy diciento que en la varialble result me pinte esa frase
   }
@@ -59,3 +61,5 @@ inicioJuego().then((numOrdenador) => {
 restart.addEventListener("click", function () {
   location.reload();
 });
+
+
