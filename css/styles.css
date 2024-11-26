@@ -70,10 +70,20 @@ p {
   align-items: center;
 }
 
+/*mensaje si has ganado o perdido*/
 #result{
   color: #f2ecec;
   font-size: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
+}
+
+/*cuenta atrás*/
+#countdown{
+  color: #f2ecec;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
